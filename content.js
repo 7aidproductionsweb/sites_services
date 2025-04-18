@@ -21,8 +21,12 @@ document.getElementById("footer").innerHTML=`
   <div class="marque"></div>
 </div>
 <div class="termes-et-conditions-container">
-  <p class="termes-et-conditions">Termes et conditions</p>
-  <p class="termes-et-conditions">Politique de confidentialité</p>
+  <a class="termes-et-conditions" href="https://7aidproductionsweb.github.io/cguweb" target="_blank">
+    Termes et conditions d'utilisation du site
+  </a>
+  <a class="termes-et-conditions" href="https://7aidproductionsweb.github.io/privacysiteweb" target="_blank">
+    Politique de confidentialité
+  </a>
 </div>
 </div>
 <div class="ai-marketing-droits">
