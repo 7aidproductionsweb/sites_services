@@ -16,21 +16,21 @@ window.onload = (event) => {
 
 document.getElementById("footer").innerHTML=`
 <div class="footercontent">
-<div class="logo2">
-  <div class="logo-image"></div>
-  <div class="marque"></div>
+  <div class="logo2">
+    <div class="logo-image"></div>
+    <div class="marque"></div>
+  </div>
+  <div class="termes-et-conditions-container" style="text-align: center; margin-top: 10px;">
+    <a class="termes-et-conditions" href="https://7aidproductionsweb.github.io/cguweb" target="_blank" style="display: block; color: white; margin-bottom: 10px;">
+      Termes et conditions d'utilisation du site
+    </a>
+    <a class="termes-et-conditions" href="https://7aidproductionsweb.github.io/privacysiteweb" target="_blank" style="display: block; color: white;">
+      Politique de confidentialité
+    </a>
+  </div>
 </div>
-<div class="termes-et-conditions-container">
-  <a class="termes-et-conditions" href="https://7aidproductionsweb.github.io/cguweb" target="_blank">
-    Termes et conditions d'utilisation du site
-  </a>
-  <a class="termes-et-conditions" href="https://7aidproductionsweb.github.io/privacysiteweb" target="_blank">
-    Politique de confidentialité
-  </a>
-</div>
-</div>
-<div class="ai-marketing-droits">
- Tous droits réservés 2025
+<div class="ai-marketing-droits" style="text-align: center; margin-top: 20px;">
+  Tous droits réservés 2025
 </div>`;
 
 };

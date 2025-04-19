@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <title>Projet IA Locale - 7AIPRODUCTIONS</title>
+    <title>Projet IA Local - 7AIPRODUCTIONS</title>
     <meta name="description" content="Découvrez nos projets d'IA locale en Guyane Française, conçus pour répondre aux besoins spécifiques de notre région.">
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./projet-ia-local.css" />
@@ -18,18 +18,47 @@
       <div id="header"></div>
       <div class="headingcontent">
         <h1 class="titre">
-          <span>Nos Projets</span><br>
-          <span class="couleur-accent">IA Locale</span>
+          <span>Nos Projets</span>
+          <span class="couleur-accent">en IA</span>
         </h1>
         <div class="sous-titre">
           <p>Découvrez comment nous utilisons l'IA pour répondre aux besoins spécifiques de la Guyane Française.</p>
         </div>
       </div>
     </div>
-    <div class="contenu">
-      <h2>Projets en cours</h2>
-      <p>Nous travaillons sur des solutions innovantes pour intégrer l'IA dans des domaines tels que l'éducation, l'agriculture, et bien plus encore.</p>
+    <div class="contenu" style="position: relative;">
+      <h2></h2>
+      <p>
+        Nous travaillons sur des solutions innovantes pour intégrer l'IA dans des domaines tels que l'éducation, l'agriculture, et bien plus encore.
+      </p>
+      <button 
+        onclick="window.open('https://7aidproductionsweb.github.io', '_blank')" 
+        style="position: relative; right: -100px; top: 0; padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Projet 7IAPRODUCTIONS 2025
+      </button>
+      </p>
     </div>
-    <div id="footer"></div>
+    <div id="footer">
+      <script>
+        document.getElementById("footer").innerHTML = `
+          <div class="footercontent">
+            <div class="logo2">
+              <div class="logo-image"></div>
+              <div class="marque"></div>
+            </div>
+            <div class="termes-et-conditions-container" style="text-align: center; margin-top: 10px;">
+              <a class="termes-et-conditions" href="https://7aidproductionsweb.github.io/cguweb" target="_blank" style="display: block; color: white; margin-bottom: 10px;">
+                Termes et conditions d'utilisation du site
+              </a>
+              <a class="termes-et-conditions" href="https://7aidproductionsweb.github.io/privacysiteweb" target="_blank" style="display: block; color: white;">
+                Politique de confidentialité
+              </a>
+            </div>
+          </div>
+          <div class="ai-marketing-droits" style="text-align: center; margin-top: 20px;">
+            Tous droits réservés 2025
+          </div>`;
+      </script>
+    </div>
   </body>
 </html>

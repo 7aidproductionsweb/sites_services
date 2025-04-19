@@ -22,7 +22,7 @@ body {
 
   /* Paramètres */
   --nom-marque: '7AIPRODUCTIONS';
-  --taille-logo: 30px;
+  --taille-logo: 50px;
   --fichier-logo: url("./public/logo@2x.png");
 
   /* fonts */
