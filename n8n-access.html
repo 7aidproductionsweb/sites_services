@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accéder à votre formulaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-top: 0;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Accéder à votre formulaire</h1>
+        <p>Veuillez entrer vos identifiants pour accéder au formulaire.</p>
+        
+        <div>
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="text" id="username" placeholder="Entrez votre nom d'utilisateur">
+        </div>
+        
+        <div>
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" placeholder="Entrez votre mot de passe">
+        </div>
+        
+        <button onclick="redirectToN8n()">Accéder au formulaire</button>
+        
+        <p id="error" class="error">Veuillez remplir tous les champs</p>
+    </div>
+
+    <script>
+        function redirectToN8n() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorElement = document.getElementById('error');
+            
+            if (!username || !password) {
+                errorElement.style.display = 'block';
+                return;
+            }
+            
+            // L'URL de votre formulaire n8n
+            const n8nUrl = 'https://krysiaproducions.app.n8n.cloud/form/0acbfb57-3b8c-477f-8ecc-7ccc1ec41c47';
+            
+            // Construction de l'URL avec l'authentification Basic
+            // Note: cela encode les identifiants dans l'URL (ce n'est pas la méthode la plus sécurisée)
+            const authUrl = n8nUrl.replace('https://', `https://${username}:${password}@`);
+            
+            // Redirection vers l'URL avec authentification
+            window.location.href = authUrl;
+        }
+    </script>
+</body>
+</html>
