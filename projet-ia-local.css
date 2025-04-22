@@ -1,108 +1,155 @@
 div.contenu p {
-    margin-top: 0;
-    margin-bottom: 45px;
-  }
-  
-  .headingframe {
-    align-self: stretch;
-    display: flex;
-  }
-  .headingframe {
-    background-color: var(--color-black);
-    flex-direction: column;
-    padding: var(--padding-5xl) 0;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .banniere {
-    max-width: 100%;
-    overflow: hidden;
-    height: 389px;
-    flex-shrink: 0;
-    object-fit: cover;
-  }
-  .banniere,
-  .ligne-separation,
-  .titre {
-    align-self: stretch;
-    position: relative;
-  }
-  .titre {
-    line-height: 44px;
-    font-weight: 800;
-    font-size: var(--font-size-23xl);
-  }
-  .ligne-separation {
-    border-top: 1px solid rgba(86, 89, 115, 0.28);
-    box-sizing: border-box;
-    height: 1px;
-    max-width: 900px;
-  }
-  .contenu {
-    align-self: stretch;
-    position: relative;
-    font-size: var(--font-size-lg);
-    color: var(--color-slategray-100);
-    display: inline-block;
-    max-width: 900px;
-  }
-  
-  #header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-self: stretch;
-    height: 42.6px;
-    padding: 0 var(--padding-mini);
-    box-sizing: border-box;
-    justify-content: center;
-  }
-  
-  .header-and-frame {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    width: 100%;
-  }
-  
-  .contenaire {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    padding: var(--padding-42xl) var(--padding-31xl);
-    gap: 45px;
-    font-size: var(--font-size-23xl);
-    color: var(--color-black);
-  }
-  
-  @media screen and (max-width: 460px) {
-    .services3 {
-      font-size: var(--font-size-mini);
-    }
-  
-    .titre1 {
-      font-size: var(--font-size-15xl);
-    }
-  
-    .contenu {
-      font-size: var(--font-size-10xl);
-    }
-  
-    .accroche {
-      font-size: var(--font-size-lg);
-    }
-  
-    .contenu-paragraphe {
-      font-size: var(--font-size-base);
-    }
+  margin-top: 0;
+  margin-bottom: 45px;
+}
 
-    .button {
-      flex-direction: row;
-      gap: var(--gap-mini);
-      align-items: center;
-      justify-content: flex-start;
-      flex: unset;
-      align-self: stretch;
-    }
-  
+.headingframe {
+  align-self: stretch;
+  display: flex;
+  background-color: var(--color-black);
+  flex-direction: column;
+  padding: var(--padding-5xl) 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.banniere {
+  max-width: 100%;
+  overflow: hidden;
+  height: 389px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.banniere,
+.ligne-separation,
+.titre {
+  align-self: stretch;
+  position: relative;
+}
+
+.titre {
+  line-height: 44px;
+  font-weight: 800;
+  font-size: var(--font-size-23xl);
+}
+
+.ligne-separation {
+  border-top: 1px solid rgba(86, 89, 115, 0.28);
+  box-sizing: border-box;
+  height: 1px;
+  max-width: 900px;
+}
+
+/* Nouveau conteneur principal pour ajouter de l'espace */
+.conteneur-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh; /* Force une hauteur minimale pour pousser le footer vers le bas */
+  padding: 60px 20px; /* Padding vertical augmenté */
+}
+
+.contenu {
+  text-align: center; /* Centre le texte */
+  position: relative;
+  font-size: var(--font-size-lg);
+  color: var(--color-slategray-100);
+  max-width: 900px;
+  margin: 0 auto; /* Centrage horizontal */
+  padding: 0 20px; /* Marge intérieure pour éviter le collage aux bords sur mobile */
+}
+
+/* Style du bouton */
+.bouton-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.projet-button {
+  padding: 15px 30px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.projet-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+  height: 42.6px;
+  padding: 0 var(--padding-mini);
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.header-and-frame {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 100%;
+}
+
+.contenaire {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-42xl) var(--padding-31xl);
+  gap: 45px;
+  font-size: var(--font-size-23xl);
+  color: var(--color-black);
+}
+
+/* Styles responsifs */
+@media screen and (max-width: 768px) {
+  .conteneur-principal {
+    padding: 40px 15px;
   }
+  
+  .projet-button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .services3 {
+    font-size: var(--font-size-mini);
+  }
+
+  .titre1 {
+    font-size: var(--font-size-15xl);
+  }
+
+  .contenu {
+    font-size: var(--font-size-base);
+  }
+
+  .accroche {
+    font-size: var(--font-size-lg);
+  }
+
+  .contenu-paragraphe {
+    font-size: var(--font-size-base);
+  }
+
+  .projet-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    width: 100%; /* Bouton pleine largeur sur très petits écrans */
+    max-width: 280px;
+  }
+}
