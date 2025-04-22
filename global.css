@@ -1,5 +1,3 @@
-/* Créé par Jonathan Roux - Utilisation interdite dans une autre formation */
-
 body {
   margin: 0;
   line-height: normal;
@@ -240,20 +238,78 @@ div.menu a:hover {
     flex: unset;
     align-self: stretch;
   }
-  .menu {
-    display: none;
-  }
-  
-  #header {
-    flex-direction: column;
-    gap: var(--gap-0);
-    align-items: center;
-    justify-content: center;
-  }
+/* Style de base du menu */
+.menu {
+  display: flex;
+  flex-direction: row;
+  padding: 0 var(--padding-21xl);
+  justify-content: flex-end;
+  gap: var(--gap-16xl);
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--color-slategray-100);
+  align-items: center;
 }
 
-@media screen and (max-width: 960px) {
-  .ai-marketing {
-    font-size: var(--font-size-xl);
+/* Bouton hamburger caché par défaut sur desktop */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--color-slategray-100);
+  margin: var(--padding-mini) 0;
+}
+
+/* Règles pour mobile */
+@media screen and (max-width: 620px) {
+  #header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px var(--padding-mini);
+    width: 100%;
+    position: relative;
+    height: auto;
   }
+  
+  .logo {
+    flex: 0 1 auto;
+  }
+  
+  /* Afficher le bouton hamburger */
+  .menu-toggle {
+    display: block;
+    flex: 0 1 auto;
+    z-index: 20;
+  }
+  
+  /* Style du menu mobile */
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--color-black);
+    padding: 0;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  /* Menu actif */
+  .menu.active {
+    display: flex;
+  }
+  
+  /* Style des liens dans le menu mobile */
+  .menu a {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(86, 115, 93, 0.3);
+  }
+} /* Close the @media screen and (max-width: 620px) block */
 }
