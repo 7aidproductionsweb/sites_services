@@ -1,5 +1,3 @@
-/* Créé par Jonathan Roux - Utilisation interdite dans une autre formation */
-
 .titre {
   position: relative;
   font-weight: 800;
@@ -254,5 +252,22 @@
   .titre-et-texte-service {
     flex: unset;
     align-self: stretch;
+  }
+}
+.titre-contact.email {
+  word-break: break-word; /* Permet de couper les mots longs si nécessaire */
+  overflow-wrap: break-word; /* Alternative moderne à word-break */
+  max-width: 100%; /* S'assure que le texte ne dépasse pas son conteneur */
+}
+
+@media screen and (max-width: 580px) {
+  .titre-contact.email {
+    font-size: 24px; /* Taille réduite pour les petits écrans */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .titre-contact.email {
+    font-size: 20px; /* Encore plus petit pour les très petits écrans */
   }
 }
