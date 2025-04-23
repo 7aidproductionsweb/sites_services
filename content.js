@@ -18,30 +18,30 @@ window.onload = (event) => {
 
   document.getElementById("header").innerHTML = headerHTML;
 
-  document.getElementById("footer").innerHTML = `
-<div class="footercontent">
-  <div class="logo2">
-    <div class="logo-image"></div>
-    <div class="marque"></div>
+document.getElementById("footer").innerHTML = `
+  <div class="footercontent">
+    <div class="logo2">
+      <div class="logo-image"></div>
+      <div class="marque"></div>
+    </div>
+    <div class="footer-realisation" style="text-align: center; margin: 10px auto; max-width: 80vw;">
+      Ce site a été entièrement réalisé à l'aide de 
+      <a href="https://openai.com/" target="_blank" style="color: yellow;">CHATGPT d'OPENAI</a> et 
+      <a href="https://www.anthropic.com/" target="_blank" style="color: yellow;">Claude d'ANTHROPIC</a>
+    </div>
+    <div class="termes-et-conditions-container" style="text-align: center; margin-top: 10px;">
+      <a class="termes-et-conditions" href="https://7aidproductionsweb.github.io/cguweb" target="_blank" style="display: block; color: white; margin-bottom: 10px;">
+        Termes et conditions d'utilisation du site
+      </a>
+      <a class="termes-et-conditions" href="https://7aidproductionsweb.github.io/privacysiteweb" target="_blank" style="display: block; color: white;">
+        Politique de confidentialité
+      </a>
+    </div>
   </div>
-  <div class="footer-realisation" style="text-align: left; margin-top: 10px; margin-left: 10vw; max-width: 50vw;">
-    Ce site a été entièrement réalisé à l'aide de 
-    <a href="https://openai.com/" target="_blank" style="color: yellow;">CHATGPT d'OPENAI</a> et 
-    <a href="https://www.anthropic.com/" target="_blank" style="color: yellow;">Claude d'ANTHROPIC</a>
+  <div class="ai-marketing-droits" style="text-align: center; margin-top: 20px;">
+    Tous droits réservés 2025
   </div>
-  <div class="termes-et-conditions-container" style="text-align: center; margin-top: 10px;">
-    <a class="termes-et-conditions" href="https://7aidproductionsweb.github.io/cguweb" target="_blank" style="display: block; color: white; margin-bottom: 10px;">
-      Termes et conditions d'utilisation du site
-    </a>
-    <a class="termes-et-conditions" href="https://7aidproductionsweb.github.io/privacysiteweb" target="_blank" style="display: block; color: white;">
-      Politique de confidentialité
-    </a>
-  </div>
-</div>
-<div class="ai-marketing-droits" style="text-align: center; margin-top: 20px;">
-  Tous droits réservés 2025
-</div>
-`;
+  `;
 
 const menuToggle = document.getElementById("menuToggle");
   const menu = document.getElementById("menu");
